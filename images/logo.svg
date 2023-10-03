@@ -1,0 +1,19 @@
+     <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+                            <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%"
+                            spreadMethod="rflect">
+                              <stop offset="0%" stop-color="red" stop-opacity="1"/>
+                              <stop offset="70%" stop-color="white" stop-opacity="1"/>
+                              <stop offset="90%" stop-color="blue" stop-opacity="1"/>
+                            </linearGradient>
+                            <style>
+                                ellipse {
+                                    fill: url(#gradient);
+                                    stroke: black;
+                                    stroke-width: 8px;
+                                    stroke-dasharray: 8,5,2;
+                                }
+                            </style>
+                            </defs>
+                            <ellipse cx="100" cy="60" ry="40" rx="20" transform="scale(0.2,0.4) rotate(25) skew(15,0)"/>
+                            </svg>
