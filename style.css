@@ -1,0 +1,267 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;600&family=Telex&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+         /* custom variables */
+:root {
+    --BACKGROUND-COLOR: #fff5;
+    --BOX-SHADOW-COLOR : rgba(0, 0, 0, 0.4);
+    --FONT-SIZE: 1rem;
+    --FONT-WEIGHT: bolder;
+    --FONT-FAMILY: 'Telex', sans-serif;;
+    --COLOR: #04011C;
+    --BORDER: 1px solid #E5E7EB;
+    --BOX-SIZING: border-box;
+    --WIDTH: 100%;
+    --DISPLAY: flex;
+}
+       /* downloaded font */
+@font-face {
+    font-family: Maknoe; 
+    src: url('Maknoe.otf');
+    font-weight: bolder;
+}
+
+body {
+    display: var(--DISPLAY);
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #170D0A, #5DBBD3, #170D0A);
+    font-family: var(--FONT-FAMILY);
+    font-size: var(--FONT-SIZE);
+}
+
+main > article {
+    --WIDTH: calc(100vw - 20vw);
+    width: var(--WIDTH);
+    height: 100vh;
+    display: var(--DISPLAY);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 {
+    --WIDTH: 40%;
+    display: var( --DISPLAY);
+    flex-direction: column;
+    justify-content: space-between;
+    width: var(--WIDTH);
+    height: 100%;
+    background: url('images/danny-lines-unsplash.jpg')  no-repeat ;
+    background-position: center / 50px;
+    background-size: cover;
+}
+
+.section-1 > .image-sidebar {
+    display: var( --DISPLAY);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-1 > .image-sidebar > .logo {
+    --BACKGROUND-COLOR: #170d0a99;
+    display: var(--DISPLAY);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BACKGROUND-COLOR);
+    width: 100%;
+    position: relative;
+    top: 30vh;
+    left: 0;
+    right: 0;
+}
+
+.section-1 > .image-sidebar > .logo > .logo-title {
+    --COLOR: #5DBBD3;
+    --FONT-SIZE: 3rem;
+    --FONT-FAMILY: Maknoe;
+    font-family: var(--FONT-FAMILY);
+    font-size: var(--FONT-SIZE);
+    color: var(--COLOR);
+}
+
+.section-1 > .image-sidebar > .logo > .logo-title::first-letter {
+    --COLOR: aliceblue;
+    color: var(--COLOR)
+}
+.section-1 > .image-sidebar > .logo + .img-author {
+    --COLOR: #170D0A;
+    --FONT-SIZE: small;
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    right: 20%;
+    font-size: var(--FONT-SIZE);
+    color: var(--COLOR);
+    font-weight: var(--FONT-WEIGHT);
+}
+.section-1 > .image-sidebar > .logo + .img-author > a {
+    --COLOR: #392214;
+    color: var(--COLOR)
+}
+
+.img-author > a:hover, a:visited {
+    text-decoration: none;
+}
+
+.section-2 {
+    --WIDTH: calc(100% - 40%);
+    display: var(--DISPLAY);
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+    background-color: var(--BACKGROUND-COLOR);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    width: var(--WIDTH);
+    height: 100vh;
+}
+.section-wrapper {
+    box-shadow: 1px 0px 3px 2px var(--BOX-SHADOW-COLOR);
+    max-height: calc(100vh - 20vh);
+}
+
+
+.section-wrapper > .introduction {
+    background-color: var(--BACKGROUND-COLOR);
+    padding: 0.6em 2.5em;
+    font-weight: var(--FONT-WEIGHT);
+    max-height: calc(80vh - 50%);
+}
+.section-wrapper > .introduction > .intro-info {
+    --WIDTH: 45ch;
+    width: var(--WIDTH);
+    padding: 0.7em 0em;
+}
+
+.section-wrapper > form {
+    --WIDTH: 80%;
+    width: var(--WIDTH);
+    max-height: calc(80vh - 30%);
+    padding: 0em 2.5em 6em;
+}
+
+form > .form-title {
+    padding: 4px 5px;
+}
+  
+form > ul.form-wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: var(--DISPLAY);
+    flex-wrap: wrap;
+    justify-content: center;
+   align-content: space-around;
+}
+form > ul.form-wrapper > li {
+    --WIDTH: calc(100% / 2 );
+    width: var(--WIDTH);
+    padding: 0.4em 0.5em ;
+}
+form > ul.form-wrapper > li > label > .label{
+    font-weight: var(--FONT-WEIGHT);
+}
+
+form > ul.form-wrapper > li > label > * {
+    --DISPLAY: block;
+    display: var(--DISPLAY);
+}
+
+ form > ul.form-wrapper > li > label > input {
+    --FONT-SIZE: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: var(--BORDER);
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
+    line-height: 0.2em;
+    font-family: var(--FONT-FAMILY);
+    font-size: var(--FONT-SIZE);
+    box-sizing: var(--BOX-SIZING);
+} 
+form > ul.form-wrapper > li > label > input:placeholder-shown {
+    --COLOR: #170D0A;
+    font-size: var(--FONT-SIZE);
+    color: var(--COLOR);
+    text-shadow: 0px 0px 5px var(--BOX-SHADOW-COLOR);
+}
+
+form > ul.form-wrapper > li > label > input:focus {
+    --BORDER: 2px solid #01A9D4;
+    outline: 0;
+    border: var(--BORDER);
+    box-shadow: 3px 1px 3px 2px var(--BOX-SHADOW-COLOR);
+}
+
+form > ul.form-wrapper > li > label > input.valid {
+    --BORDER: 1px solid green;
+    border: var(--BORDER);
+}
+form > ul.form-wrapper > li > label > input.invalid {
+    --BORDER: 1px solid red;
+    border: var(--BORDER);
+}
+form > ul.form-wrapper > li > label > input:focus.invalid {
+    --BORDER: 2px solid red;
+    border: var(--BORDER);
+}
+form > ul.form-wrapper > li > label > input:focus.valid {
+    --BORDER: 2px solid green;
+    border: var(--BORDER);
+}
+
+.section-2 > .account{ 
+    max-height: 20vh;
+    padding: 1em 2.5em;
+}
+.section-2 > .account > * {
+    --DISPLAY: block;
+    display: var(--DISPLAY);
+    margin: 1em;
+}
+
+.section-2 > .account > button {
+    --COLOR: #E5E7EB;
+    --BORDER: 0;
+    --BACKGROUND-COLOR: #015872;
+    --WIDTH: 30%;
+    width: var(--WIDTH);
+    padding: 12px 15px;
+    background-color: var(--BACKGROUND-COLOR);
+    color: var(--COLOR);
+    border: var(--BORDER);
+    border-radius: 5px 9px;
+    font-weight: var(--FONT-WEIGHT);
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.4s ease-in;
+}
+.section-2 > .account > button:hover {
+    background: linear-gradient(to bottom right, #170D0A 30%, #5DBBD3 20%, #170D0A 10%);
+    transition: all 0.2s ease-in;
+    transform: scale(1.1);
+    box-shadow: 3px 1px 3px 2px var(--BOX-SHADOW-COLOR);
+}
+ .account > .account-log > .login-in {
+    --COLOR: #392214;
+    --FONT-WEIGHT: lighter;
+    color: var(--COLOR);
+    cursor: pointer;
+    font-weight: var(--FONT-WEIGHT);
+    transition: all 0.6s;
+ }
+ .account > .account-log > .login-in:hover {
+    --COLOR: #E5E7EB;
+    color: var(--COLOR);
+    font-weight: var(--FONT-WEIGHT);
+    transition: all 0.6s;
+ }
