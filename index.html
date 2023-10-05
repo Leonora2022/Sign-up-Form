@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up-Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
@@ -13,69 +14,81 @@
             <section class="section-1">
                 <div class="image-sidebar">
                     <div class="logo">
-                        <img src="images/logo.svg" alt="logo of a basketball organization">
+                        <img src="images/logo.svg" alt="logo of a basketball organization" width="110" height="100" >
                         <h1 class="logo-title">Q-SLIDE</h1>
                     </div>
-                    <footer class="img-author">Photo by Danny Lines on Unsplash</footer>
+                    <footer class="img-author">Photo by <a href="https://unsplash.com/s/photos/Photo-by-Danny-Lines-on-Unsplash"> Danny Lines</a> on <a href="https://unsplash.com/"> Unsplash</a></footer>
                 </div>
             </section>
             <section class="section-2">
+                <div class="section-wrapper">
              <div class="introduction">
-                <h3 class="intro-info">
+                <h4 class="intro-info">
                     This is not a real online service! You know you need something 
                     like this in your life to help you realize your deepest dreams.
-                    Sign up <i>now</i> to get started.
-                </h3>
+                   <p>Sign up <i>now</i> to get started.</p> 
+                </h4>
                 <p class="intro-sub">
-                    You know you want to.
+                    You <i>know</i> you want to.
                 </p>
              </div>
-             <form action="#" method="post" id="main-form">
-                <h2>Let's do this!</h2>
-                <p>
-                    <label for="fname">
-                        <span>FIRST NAME</span>
+             
+             <form action="#" method="post" id="main-form" autocomplete="off" novalidate>
+                <h3 class="form-title">Let's do this!</h3>
+                <ul class="form-wrapper">
+                    <li>
+                        <label for="fname">
+                            <span class="label">FIRST NAME</span>
+                        <input type="text" name="fname" id="fname" placeholder="Enter first name..." autocomplete="on"> 
+                        <output class="error f-error">*Enter first name</output>
                     </label>
-                    <input type="text" name="fname" id="fname" value="Thor" required>
-                </p>
-                <p>
-                    <label for="lname">
-                        <span>LAST NAME</span>
+                    </li>
+                    <li>
+                        <label for="lname">
+                            <span class="label">LAST NAME</span>
+                        <input type="text" name="lname" id="lname" placeholder="Enter last name..." autocomplete="on"> 
+                        <output class="error l-error">*Enter last name</output>
                     </label>
-                    <input type="text" name="lname" id="lname" required value="Odinson">
-                </p>
-                <p>
-                    <label for="mail">
-                        <span>EMAIL</span>
+                    </li>
+                    <li>
+                        <label for="mail">
+                            <span class="label">EMAIL</span>
+                        <input type="email" name="user_email" id="mail" multiple placeholder="example@domain.com" autocomplete="on">
+                        <output class="error e-error">*Enter email address eg. example@domain.com</output>
                     </label>
-                    <input type="email" name="user_email" id="mail" multiple>
-                </p>
-                <p>
-                    <label for="contact">
-                        <span>PHONE NUMBER</span>
+                    </li>
+                    <li>
+                        <label for="contact">
+                            <span class="label">PHONE NUMBER</span>
+                        <input type="tel" name="user_contact" id="contact" placeholder="+233 0249000111" autocomplete="on">
+                        <output class="error t-error">*Enter 10 digits eg. +233 0233321123 </output>
                     </label>
-                    <input type="tel" name="user_contact" id="contact">
-                </p>
-                <p>
-                    <label for="pwd">
-                        <span>PASSWORD</span>
+                    </li>
+                    <li>
+                        <label for="pwd">
+                            <span class="label">PASSWORD</span>
+                        <input type="password" name="user_password" id="pwd" placeholder="Enter password">
+                        <output class="error p-error">*Enter at least 8 (eight) characters containing symbols, numbers, alphabets(capital & small)
+                        </output>
                     </label>
-                    <input type="password" name="user_password" id="pwd">
-                    <output class="pwd-info">* Passwords do not match</output>
-                </p>
-                <p>
-                    <label for="confirm">
-                       <span> CONFIRM PASSWORD</span>
-                    </label>
-                    <input type="password" name="consfirm_password" id="confirm">
-                </p>
+                    </li>
+                    <li>
+                        <label for="confirm">
+                            <span class="label"> CONFIRM PASSWORD</span>
+                         <input type="password" name="consfirm_password" id="confirm" placeholder="confirm password">
+                         <output class="pwd-error"></output>
+                        </label>
+                        </li>
+                </ul>
              </form>
+               </div>
              <div class="account">
                 <button type="submit" form="main-form">
                     Create Account
                 </button>
-                <p>Already have an account? <span class="login-in">Log in</span></p>
+                <p class="account-log">Already have an account? <span class="login-in">Log in</span></p>
              </div>
+            
             </section>
         </article>
     </main>
